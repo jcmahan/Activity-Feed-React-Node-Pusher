@@ -1,3 +1,6 @@
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema; 
+
 var measureSchema = new Schema({
     measure: {type: Number}, 
     insertedAt: {type: Date},
@@ -5,3 +8,4 @@ var measureSchema = new Schema({
     unit: {type: String},
 });
 
+module.exports = mongoose.model('Measure', measureSchema);

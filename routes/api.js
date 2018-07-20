@@ -1,4 +1,9 @@
-var pusher = new pusher({
+var Pusher = require('pusher');
+var Measure = require('../models/measure');
+var express = require('express');
+var router = express.Router();
+
+var pusher = new Pusher({
     appID       : process.env.PUSHER_APP_ID,
     key         : process.env.PUSHER_APP_KEY,
     secret      : process.env.PUSHER_APP_SECRET,

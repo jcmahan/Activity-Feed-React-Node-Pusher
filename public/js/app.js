@@ -2,6 +2,7 @@ var App = React.createClass({
     getInitialState: function(){
         return { events: [] };
     },
+
     componentWillMount: function(){
         this.pusher = new Pusher(PUSHER_APP_KEY, {
             encrypted: true, 
@@ -21,11 +22,12 @@ var App = React.createClass({
     updateEvents: function(data){
         var newArray = this.state.events.slice(0);
         newArray.unshift(data);
+
         this.setState({
             events: newArray,
         });
     },
-    render(){
+    render: function(){
         return (
             <div>
                 <Header />

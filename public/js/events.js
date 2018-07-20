@@ -7,6 +7,7 @@ var Events = React.createClass({
       const key = eventsLength - index;
       return <Event event={evt} key={key} />;
     });
+    
     return (
       <section className={"blue-gradient-background intro-splash splash"}>
         <div className={"container center-all-container"}>
